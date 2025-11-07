@@ -1,0 +1,7 @@
+.idea/
+.zed/
+.vscode/
+
+node_modules/
+
+.env
