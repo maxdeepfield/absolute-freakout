@@ -1,3 +1,19 @@
+// Parallax effect for floating cubes
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', function() {
+    const cubes = document.querySelectorAll('.cube');
+    const scrollY = window.scrollY;
+    
+    cubes.forEach((cube, index) => {
+        const speed = (index + 1) * 0.1;
+        const yPos = -(scrollY * speed);
+        cube.style.transform = `translateY(${yPos}px) rotateX(${scrollY * 0.1}deg) rotateY(${scrollY * 0.1}deg)`;
+    });
+    
+    lastScrollY = scrollY;
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -33,9 +49,9 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     if (window.scrollY > 100) {
-        header.style.backgroundColor = 'rgba(44, 62, 80, 0.9)';
+        header.style.backgroundColor = '#000';
     } else {
-        header.style.backgroundColor = '#2c3e50';
+        header.style.backgroundColor = '#000';
     }
 });
 
