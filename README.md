@@ -1,2 +1,2 @@
 # Absolute Freakout
-Sources for website: https://absolutefreakout.com
+Sources of website: https://absolutefreakout.com
